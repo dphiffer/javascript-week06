@@ -9,16 +9,16 @@
         <script src="jquery-1.11.0.js"></script>
         <script>
         
-        var position = 1;
-        var maxPosition = 4;
+        var pos = 1;
+        var count = 4;
         
         function nextImage() {
-            position++;
-            if (position > maxPosition) {
-                position = 1;
+            pos++;
+            if (pos > count) {
+                pos = 1;
             }
             $('#image').fadeOut(250, function() {
-                $('#image').attr('src', 'images/' + position + '.jpg');
+                $('#image').attr('src', 'images/' + pos + '.jpg');
                 $('#image').fadeIn(250);
             });
         }
